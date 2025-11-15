@@ -102,7 +102,7 @@ const Proyecto: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-40 to-purple-50 p-6">
+    <div className="min-h-screen bg-gradient-to-r from-blue-50 to-purple-200">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
@@ -250,14 +250,14 @@ const Proyecto: React.FC = () => {
                     <div className="space-y-3 mb-5">
                       <div className="flex items-center justify-between p-3 bg-red-50 rounded-lg">
                         <span className="font-semibold text-red-700">⚔️ Poder de Ataque</span>
-                        <span className="text-xl font-bold text-red-600 bg-white px-3 py-1 rounded-full border border-red-200">
+                        <span className="text-xl font-bold text-red-600 bg-white px-3 py-1 rounded-full border border-red-600">
                           {card.ataque}
                         </span>
                       </div>
                       
                       <div className="flex items-center justify-between p-3 bg-green-50 rounded-lg">
                         <span className="font-semibold text-green-700">🛡️ Poder de Defensa</span>
-                        <span className="text-xl font-bold text-green-600 bg-white px-3 py-1 rounded-full border border-green-200">
+                        <span className="text-xl font-bold text-green-600 bg-white px-3 py-1 rounded-full border border-green-500">
                           {card.defensa}
                         </span>
                       </div>
