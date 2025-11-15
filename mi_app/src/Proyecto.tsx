@@ -1,5 +1,3 @@
-// src/Proyecto.tsx
-// src/Proyecto.tsx
 import React, { useState } from 'react';
 
 interface Card {
@@ -32,7 +30,7 @@ const Proyecto: React.FC = () => {
     }
   ]);
 
-  // Estado del formulario
+  // Formulario
   const [nombre, setNombre] = useState('');
   const [descripcion, setDescripcion] = useState('');
   const [ataque, setAtaque] = useState('');
@@ -40,7 +38,7 @@ const Proyecto: React.FC = () => {
   const [imagen, setImagen] = useState('');
   const [editId, setEditId] = useState<number | null>(null);
 
-  // CREATE - Crear carta
+  // Crear carta
   const crearCarta = (e: React.FormEvent) => {
     e.preventDefault();
     
@@ -50,7 +48,7 @@ const Proyecto: React.FC = () => {
       descripcion,
       ataque: parseInt(ataque),
       defensa: parseInt(defensa),
-      imagen: imagen || "https://via.placeholder.com/300x400/6B7280/FFFFFF?text=Sin+Imagen"
+      imagen: imagen || ""
     };
 
     setCards([...cards, nuevaCarta]);
@@ -109,15 +107,15 @@ const Proyecto: React.FC = () => {
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-800 mb-4">
-            🃏 Colección de Cartas Mágicas
+            🃏 Colección de Cartas Fantasticas
           </h1>
           <p className="text-gray-600 text-lg">
-            Gestiona tu mazo de cartas con poderes especiales
+            Administra tu mazo de Cartas Brouh
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-          {/* Formulario - Más estrecho */}
+          {/* Formulario - Mas Cortito */}
           <div className="lg:col-span-1">
             <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-200 sticky top-6">
               <h2 className="text-xl font-bold mb-6 text-gray-800 border-b pb-3">
@@ -131,7 +129,7 @@ const Proyecto: React.FC = () => {
                   </label>
                   <input
                     type="text"
-                    placeholder="Ej: Dragón Legendario"
+                    placeholder="Ej: Goku Ultrainstinto"
                     value={nombre}
                     onChange={(e) => setNombre(e.target.value)}
                     className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -141,10 +139,10 @@ const Proyecto: React.FC = () => {
                 
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">
-                    Descripción del Poder
+                    Descripción de la Carta
                   </label>
                   <textarea
-                    placeholder="Describe las habilidades especiales..."
+                    placeholder="Describe lo que quieras de tu personaje..."
                     value={descripcion}
                     onChange={(e) => setDescripcion(e.target.value)}
                     className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -155,7 +153,7 @@ const Proyecto: React.FC = () => {
 
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">
-                    URL de la Imagen
+                    Enlace de la Imagen
                   </label>
                   <input
                     type="url"
