@@ -102,7 +102,7 @@ const Proyecto: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 p-6">
+    <div className="min-h-screen bg-gradient-to-br from-blue-40 to-purple-50 p-6">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
@@ -228,7 +228,7 @@ const Proyecto: React.FC = () => {
                       alt={card.nombre}
                       className="w-full h-64 object-cover"
                       onError={(e) => {
-                        e.currentTarget.src = "https://via.placeholder.com/300x400/6B7280/FFFFFF?text=Imagen+No+Disponible";
+                        e.currentTarget.src = "https://i.pinimg.com/474x/68/ba/fd/68bafdcf2f9dc6e86a5f1170bba06359.jpg";
                       }}
                     />
                     <div className="absolute top-3 right-3 bg-black bg-opacity-70 text-white px-2 py-1 rounded-lg text-sm font-bold">
@@ -267,7 +267,7 @@ const Proyecto: React.FC = () => {
                     <div className="space-y-2 mt-auto">
                       <button
                         onClick={() => editarCarta(card)}
-                        className="w-full bg-yellow-500 text-white py-3 rounded-lg hover:bg-yellow-600 font-semibold transition-colors flex items-center justify-center"
+                        className="w-full bg-green-500 text-white py-3 rounded-lg hover:bg-green-600 font-semibold transition-colors flex items-center justify-center"
                       >
                         ✏️ Editar Carta
                       </button>
@@ -286,8 +286,8 @@ const Proyecto: React.FC = () => {
             {cards.length === 0 && (
               <div className="text-center py-12">
                 <div className="text-6xl mb-4">🃏</div>
-                <h3 className="text-2xl font-bold text-gray-600 mb-2">No hay cartas en tu mazo</h3>
-                <p className="text-gray-500">Crea tu primera carta para comenzar tu colección</p>
+                <h3 className="text-2xl font-bold text-gray-600 mb-2">No existen cartas creadas</h3>
+                <p className="text-gray-500">Crea tu primera carta y arma tu mazo</p>
               </div>
             )}
           </div>
